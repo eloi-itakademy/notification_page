@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+:root {
+    /* PRIMARY COLOR */
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    /* NEUTRAL */
+    --very-light-gray: hsl(210, 60%, 98%);
+    --light-gray1: hsl(211, 68%, 94%);
+    --light-gray2: hsl(205, 33%, 90%);
+    --gray-blue: hsl(219, 14%, 63%);
+    --dark-gray-blue: hsl(219, 12%, 42%);
+    --very-dark-gray-blue: hsl(224, 21%, 14%);
+
+    /* TYPOGRAPHY */
+    --title: 25px;
+    --paragraph: 16px;
+    --ft-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--very-light-gray);
+    font-family: var(--ft-family);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+a:visited {
+    color: unset;
+}
+p {
+    font-size: var(--paragraph);
+}
+
+
+/* ELEMENTS STYLE */
+.card-notification {
+    max-width: 760px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+}
+.card-header p {
+    font-size: 25px;
+    font-weight: 800;
+}
+.card-header p span {
+    font-size: 22px;
+    color: white;
+    background-color: var(--blue);
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+.card-header #nb-notif {
+    color: var(--dark-gray-blue);
+}
+.card-body .notification {
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+.card-body .notification .user-pic {
+    width: 60px;
+    margin-right: 15px;
+}
+.card-body .notification.unread {
+    background-color: var(--light-gray1);
+}
+.card-body .notification.unread .notif-content .notif-description {
+    position: relative;
+}
+.card-body .notification.unread .notif-content .notif-description::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--red);
+}
